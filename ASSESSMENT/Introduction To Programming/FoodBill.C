@@ -1,68 +1,90 @@
-#include <stdio.h>
-#include <conio.h>
+#include<stdio.h>
+#include<conio.h>
 
-int main() {
-    int choice, quantity, more;
-    float total = 0;
-
-    clrscr(); // clear screen (Turbo C specific)
-
-    printf("=====================================\n");
-    printf("       WELCOME TO FOOD CENTER        \n");
-    printf("=====================================\n");
-
-    do {
-        // Display Menu
-        printf("\nMENU CARD:\n");
-        printf("1. Pizza       - Rs.199\n");
-        printf("2. Burger      - Rs.99\n");
-        printf("3. Pasta       - Rs.149\n");
-        printf("4. Sandwich    - Rs.79\n");
-        printf("5. FrenchFries - Rs.59\n");
-
-        // Take user choice
-        printf("\nEnter your choice (1-5): ");
-        scanf("%d", &choice);
-
-        // Take quantity
-        printf("Enter quantity: ");
-        scanf("%d", &quantity);
-
-        // Calculate cost according to choice
-        switch(choice) {
-            case 1: total += 199 * quantity;
-                    printf("Added %d Pizza(s).\n", quantity);
-                    break;
-            case 2: total += 99 * quantity;
-                    printf("Added %d Burger(s).\n", quantity);
-                    break;
-            case 3: total += 149 * quantity;
-                    printf("Added %d Pasta(s).\n", quantity);
-                    break;
-            case 4: total += 79 * quantity;
-                    printf("Added %d Sandwich(es).\n", quantity);
-                    break;
-            case 5: total += 59 * quantity;
-                    printf("Added %d French Fries.\n", quantity);
-                    break;
-            default: printf("Invalid choice! Please select from 1-5.\n");
-        }
-
-        // Ask if want more
-        printf("\nDo you want to order more? (1 = Yes / 0 = No): ");
-        scanf("%d", &more);
-
-    } while(more == 1);
-
-    // Final bill
-    printf("\n=====================================\n");
-    printf("             FINAL BILL               \n");
-    printf("=====================================\n");
-    printf("Total Amount to Pay = Rs. %.2f\n", total);
-    printf("=====================================\n");
-    printf("    THANK YOU! VISIT AGAIN 😊        \n");
-    printf("=====================================\n");
-
-    getch(); // wait for key press in Turbo C
-    return 0;
+void star()
+{
+	printf("\n**************************************");
 }
+
+void line()
+{
+	printf("\n--------------------------------------");
+}
+
+
+void main()
+{
+	int choice, quantity, more;
+	float total=0;
+
+	clrscr();
+
+	do
+	{
+		star();
+		//DIsplay For Menu
+		printf("\nMenu Card : ");
+		printf("\n1. Pizza        - Rs.299");
+		printf("\n1. Burger       - Rs.199");
+		printf("\n3. Pasta        - Rs.179");
+		printf("\n4. Sandwich     - Rs.189");
+		printf("\n5. FrenchFries  - Rs.129");
+		line();
+
+		//Take User Choice
+		printf("\nEnter Your Choice (From 1-5) : ");
+		scanf("%d",&choice);
+		line();
+
+		//Take Quantity
+		printf("\nENter Your Food Quantity : ");
+		scanf("%d",&quantity);
+		line();
+		line();
+
+		//Calculate cost According Choice
+		switch(choice)
+		{
+			case 1 :
+				total = total + 299 * quantity;
+				printf("\nAdded %d Pizza(s).",quantity);
+				break;
+			case 2 :
+				total = total + 199 * quantity;
+				printf("\nAdded %d Burger(s).",quantity);
+				break;
+			case 3 :
+				total = total + 179 * quantity;
+				printf("\nAdded %d Pasta(s).",quantity);
+				break;
+			case 4 :
+				total = total + 189 * quantity;
+				printf("\nAdded %d Sandwich(s).",quantity);
+				break;
+			case 5 :
+				total = total + 129 * quantity;
+				printf("\nAdded %d French-Fries(s).",quantity);
+				break;
+			default :
+				printf("\nYou Added Nothing / Invalid Choice");
+		}
+		star();
+		star();
+
+		//Ask if You Want More
+		printf("\nDo you want to order more? (1 = Yes/0 = No) : ");
+		scanf("%d",&more);
+		line();
+
+	}while(more == 1);
+	//Final bill
+	printf("\nYour Final Bill");
+	star();
+	printf("\nTotal Amount to Pay = Rs. %.2f", total);
+	star();
+	printf("\nThank You...!     Visit Again...!");
+	star();
+
+	getch();
+}
+
