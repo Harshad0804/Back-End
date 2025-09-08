@@ -1,24 +1,29 @@
-#include <iostream>
-using namespace std;
+#include<iostream.h>
+#include<conio.h>
 
-int main() {
-    // Implicit Conversion (type promotion)
-    int num = 10;
-    double result = num + 5.5;  // int + double → int promoted to double
+void main()
+{
+	clrscr();
+	//Implicit
+	int num1=10;
+	float num2=5.5;
+	float result1=num1+num2;
 
-    cout << "Implicit Conversion:" << endl;
-    cout << "num (int): " << num << endl;
-    cout << "result (double): " << result << endl << endl;
+	cout<<"\nImplicit Conversion Example :";
+	cout<<"\nNum1 (int) = "<<num1;
+	cout<<"\nNum2 (float) = "<<num2;
+	cout<<"\nResult (float) = "<<result1;
 
-    // Explicit Conversion (type casting)
-    double pi = 3.14159;
-    int intPi = (int)pi;  // C-style cast
-    int intPi2 = static_cast<int>(pi); // Modern C++ cast
+	cout<<"\n";
 
-    cout << "Explicit Conversion:" << endl;
-    cout << "pi (double): " << pi << endl;
-    cout << "intPi (C-style cast): " << intPi << endl;
-    cout << "intPi2 (static_cast): " << intPi2 << endl;
+	//Explicit
 
-    return 0;
+	double pi=3.14159;
+	int approx = (int)pi;
+
+	cout<<"\nExplicit Conversion Example :";
+	cout<<"\npi (double) = "<<pi;
+	cout<< "\nAfter Casting to int = "<<approx;
+
+	getch();
 }
