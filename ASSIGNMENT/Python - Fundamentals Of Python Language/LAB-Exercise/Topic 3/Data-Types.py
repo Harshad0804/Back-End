@@ -1,10 +1,10 @@
 age = 20
-height = 5.9
-name = "Harsh"
+height = 5.7
+name = "Harshad"
 is_student = True
 fruits = ["apple", "banana", "mango"]
 colors = ("red", "green", "blue")
-student_info = {"name": "Harsh", "age": 20, "course": "Python"}
+student_info = {"name": "Harshad", "age": 20, "course": "Python"}
 unique_numbers = {1, 2, 3, 3, 4}
 
 print("Name:", type(name))
