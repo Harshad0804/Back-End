@@ -1,9 +1,9 @@
 my_dict = {
-    "name": "Karan",
+    "name": "Harshad",
     "age": 21,
     "city": "Ahmedabad",
-    "course": "Python",
+    "course": "Full-Stack Python",
     "year": 2025,
-    "marks": 85
+    "marks": 80
 }
 print(my_dict)
