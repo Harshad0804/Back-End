@@ -1,7 +1,0 @@
-django==5.0
-djangorestframework==3.14.0
-requests==2.31.0
-pillow==10.0.0
-mysqlclient==2.2.0
-python-dotenv==1.0.0
-django-cors-headers==4.2.0
